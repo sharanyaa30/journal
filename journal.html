@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    .font-serif-ethereal { font-family: 'Cormorant Garamond', serif; }
+    .font-sans-ethereal { font-family: 'Montserrat', sans-serif; }
+    
+    /* Smooth page entry animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in { animation: fadeIn 1.5s ease-out forwards; }
+  </style>
+</head>
+<body class="font-sans-ethereal bg-[#FAF9F6] text-stone-700 overflow-x-hidden">
+
+  <nav class="fixed w-full z-50 bg-[#FAF9F6]/40 backdrop-blur-sm px-12 py-8 flex justify-between items-center transition-all duration-500 hover:bg-white/90">
+    <div class="text-3xl italic tracking-tighter font-serif-ethereal">The Journal.</div>
+    <ul class="hidden md:flex gap-14 text-[10px] uppercase tracking-[0.3em] font-medium">
+      <li class="transition-colors duration-500 cursor-pointer hover:text-rose-300">Stories</li>
+      <li class="transition-colors duration-500 cursor-pointer hover:text-rose-300">Beauty</li>
+      <li class="transition-colors duration-500 cursor-pointer hover:text-rose-300">About</li>
+    </ul>
+    <button class="text-[10px] uppercase tracking-widest border-b border-stone-800 pb-1 hover:text-rose-400 hover:border-rose-400 transition-all duration-700">Subscribe</button>
+  </nav>
+
+  <header class="flex items-center justify-center h-screen px-6">
+    <div class="max-w-4xl text-center animate-fade-in">
+      <span class="text-rose-300 text-xs uppercase tracking-[0.5em] mb-8 block">Aesthetically Personal</span>
+      <h1 class="mb-12 text-6xl italic leading-tight md:text-9xl font-serif-ethereal">Capture the <br> <span class="text-stone-400">Ethereal</span></h1>
+      <div class="relative inline-block group">
+        <div class="absolute transition-transform duration-1000 ease-out scale-0 rounded-full -inset-4 bg-rose-50 group-hover:scale-100"></div>
+        <button class="relative px-12 py-5 text-xs font-bold tracking-widest uppercase transition-colors duration-700 border rounded-full border-stone-300 group-hover:border-rose-200">
+          Enter Journal
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="px-12 pb-40 mx-auto max-w-7xl">
+    <div class="grid items-center grid-cols-1 gap-24 md:grid-cols-2">
+      
+      <div class="relative group">
+        <div class="overflow-hidden rounded-2xl aspect-[3/4] relative">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=2087&auto=format&fit=crop" 
+               class="w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-110">
+          <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 bg-rose-100/10 group-hover:opacity-100"></div>
+        </div>
+        <div class="mt-10 transition-all duration-700 transform group-hover:translate-x-4">
+          <span class="text-[9px] uppercase tracking-[0.4em] text-rose-300">Skincare Rituals</span>
+          <h2 class="mt-2 text-3xl italic font-serif-ethereal">The Morning Light</h2>
+          <p class="max-w-sm mt-4 font-light leading-relaxed text-stone-400">Exploring the intersection of natural light and personal skincare routines.</p>
+        </div>
+      </div>
+
+      <div class="relative group md:mt-40">
+        <div class="overflow-hidden rounded-2xl aspect-[3/4] relative">
+          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=2070&auto=format&fit=crop" 
+               class="w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-110">
+          <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 bg-rose-100/10 group-hover:opacity-100"></div>
+        </div>
+        <div class="mt-10 text-right transition-all duration-700 transform group-hover:translate-x-4 md:text-left">
+          <span class="text-[9px] uppercase tracking-[0.4em] text-rose-300">Beauty & Soul</span>
+          <h2 class="mt-2 text-3xl italic font-serif-ethereal">Golden Hour Glow</h2>
+          <p class="max-w-sm mt-4 ml-auto font-light leading-relaxed text-stone-400 md:ml-0">A curated collection of essentials for a minimalist evening glow.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
